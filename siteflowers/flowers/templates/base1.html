@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{{title}}{%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'styles/for_cards.css'%}">
+    <link rel="stylesheet" href="{% static 'styles/styles.css'%}">
+    <link rel="stylesheet" href="{% static 'styles/navbar.css'%}">
+    <link rel="stylesheet" href="{% static 'styles/buqet.css'%}">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="{% url 'home' %}">
+        <img class="logo"
+            src="https://c0.klipartz.com/pngpicture/983/474/gratis-png-jardin-rosas-flor-playa-rosa-informacion-flor.png"
+            alt="">
+            </a>
+        <div class="drop">
+            <button class="nav-btn">Категории</button>
+            <div class="dropdown-content">
+                <a href="{% url 'get-bouquets' %}">Букеты роз</a>
+                <a href="#">Влюбленным</a>
+                <a href="#">Свадьба</a>
+                <a href="#">Цветочные композиции</a>
+            </div>
+        </div>
+        <div class="nav-list">
+            <a href="#">Оплата</a>
+            <a href="#">О нас</a>
+            <a href="#">Магазины</a>
+        </div>
+    </div>
+    {%block content%}
+    {% for i in flow %}
+<div class="container">
+        <div class="card">
+            <a href="{%url 'get-card' i.id%}">
+                <img src="{{i.image.url}}">
+
+            </a>
+            <div class= "info">
+                <a href="#">
+                    <p>{{i.title}}</p>
+                </a>
+                <a href="#">
+                    <p>{{i.price}}</p>
+                </a>
+                <button>Купить</button>
+            </div>
+        </div>
+
+    </div>
+    {%endfor%}
+    {%endblock%}
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="Contact"> 
+
+                </div>
+                <div class="adress"> 
+                        <p>
+                            Магазин: пр-т. Дзержинского, 77А (Дисконт-центр 24/7)<br>
+                                Магазин: пр-т Партизанский 14, пом.114<br>
+                                Магазин: пр-т Дзержинского, 127, подъезд 3<br>
+                                Магазин: ул. Восточная, 131<br>
+                                Магазин: пр-т Независимости, 172<br>
+                                Магазин: ул. Бельского, 6<br>
+                                Магазин: ул. Притыцкого, 158<br>
+                                Магазин: ул. Димитрова, 5<br>
+                                Магазин: ул. Корженевского 51, цоколь<br>
+                                Магазин: пр-т. Партизанский, 107<br>
+                                Магазин: ул. Петра Мстиславца, 22<br>
+                                Магазин: пр-т. Рокоссовского, 18а<br>
+                                Магазин: пр-т. Победителей, 135А<br>
+                                Магазин: Игуменский тракт, 16<br>
+                                Магазин: пр-т. Пушкина, 43а<br>
+                                Магазин: ул. Неманская, 3<br>
+                                Магазин: пр-т. Дзержинского, 115<br>
+                                Магазин: ул. Туровского 12 пом. 133 ТЦ (Променад 5)<br>
+                                Магазин: пр-т. Мира, 1<br>
+                                Магазин: ул. Шаранговича, 25<br>
+                                Магазин: Боровляны, ул. Березовая Роща 108 (ТЦ Перекресток)<br>
+                        </p>
+                </div>
+                <p>ОО "Цветы" зарегистрировано 7 сентября 2022 года. Регистрационный номер 99999999 выдан
+                    Минским горисполкомом. (УНП: 193645422)
+                    Зарегистрирован в торговом реестре Республики Беларусь от 21 сентября 2022 номер 541607</p>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

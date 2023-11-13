@@ -1,0 +1,11 @@
+.cards-conteiner>.card>a>img{
+    display: block;
+    width: 36%;
+    margin-left: auto;
+    margin-right: auto
+
+}
+.cards-conteiner>.card>.info>a{
+    text-decoration: none;
+    color: black
+}

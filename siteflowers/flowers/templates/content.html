@@ -1,0 +1,25 @@
+{%extends 'base1.html'%}
+{%block title%}{{title}}{%endblock%}
+{%block content%}
+{% for i in flow %}
+<div class="cards-conteiner">
+        <div class="card">
+            <a href="{%url 'get-card' i.id%}">
+                <img src="{{i.image.url}}">
+
+            </a>
+            <div class= "info">
+                <a href="#">
+                    <p>{{i.title}}</p>
+                </a>
+                <a href="#">
+                    <p>{{i.price}}</p>
+                </a>
+                <button>Купить</button>
+            </div>
+        </div>
+
+    </div>
+
+{% endfor %}
+{%endblock%}
