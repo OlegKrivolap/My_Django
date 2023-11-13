@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+}
+.navbar{
+    display: flex;
+    background-color:rgb(194, 127, 171) ;
+}
+.nav-list{
+    display: flex;
+}
+.logo{
+    display: inline;
+    width: 60px;
+
+}
+.nav-list a{
+    display: inline;
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+
+}
+.nav-list a:hover{
+    background-color:rgb(206, 158, 190)
+}
+
+.nav-btn{
+    background-color:rgb(194, 127, 171);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.nav-btn:hover{
+    background-color:rgb(206, 158, 190);
+}
+
+.drop .dropdown-content{
+    display: none;
+}
+.drop:hover .dropdown-content{
+    margin-top: 5px;
+    display: block;
+    position: absolute;
+    background-color:rgb(194, 127, 171);
+}
+.container>.card>.info>a{
+    text-decoration: none;
+    color:black
+}
+.dropdown-content a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+}
+.dropdown-content a:hover{
+    background-color:rgb(206, 158, 190);
+}

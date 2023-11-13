@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container.card>a>img{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3);
+}
+.container.card{
+    margin: 10em;
+}
+.container>.card>.info>a{
+    text-decoration: none;
+}
+.card>a>img{
+    width: 100%;
+}
+.card>.info{
+    text-align: center;
+}
