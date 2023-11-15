@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<body>
+{% for fruit in w1 %}
+    <h5>{{ fruit.name }}</h5> // название фрукта
+    {% for v in fruit.library.all %}
+        <h5>{{ v.name }}</h5> // название вида
+    {% endfor %}
+{% endfor %}
+</body>
+</html>
