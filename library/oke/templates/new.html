@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    {% for library in w1 %}-->
+<h1>
+<!--    {{library.name}}-->
+    {{w1.name}}
+<!--    {% for author in library.author.all %}-->
+    {% for author in authors %}
+    {{author.name}}
+    {% endfor %}
+
+</h1>
+</body>
+</html>
