@@ -5,12 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<body>
-{% for fruit in w1 %}
-    <h5>{{ fruit.name }}</h5> // название фрукта
-    {% for v in fruit.library.all %}
-        <h5>{{ v.name }}</h5> // название вида
-    {% endfor %}
-{% endfor %}
+</body>
+    <h5> Средняя цена {{avg}}</h5>
+<h5> Минимальная цена {{min}}</h5>
+<h5> Максимальная цена {{max}}</h5>
+<h5> Всего книг {{all}}</h5>
+
 </body>
 </html>
