@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>CAR</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css'%}">
+</head>
+<body>
+<div class="content">
+{%for i in w1%}
+    <p>{{i.name}}</p>
+    <p>{{i.color}}</p>
+    <figure>
+<p><img src="{{i.photo.url}}"></p>
+    <figcaption><a href="{{i.link}}">Купить</a></figcaption>
+        </figure>
+{%endfor%}
+    </div>
+
+</body>
+</html>
