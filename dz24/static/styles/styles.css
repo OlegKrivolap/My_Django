@@ -1,0 +1,13 @@
+.content{
+display:inline-block;
+flex-direction: row;
+justify-content:center;
+}
+
+p{
+color:red;
+}
+img{
+width :50%;
+height:400 px;
+}
