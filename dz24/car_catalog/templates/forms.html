@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="content">
+{%for i in car%}
+<p>{{i.name}}</p>
+        <p>{{i.color}}</p>
+        <p>{{i.price}} $</p>
+    <img src="{{i.photo.url}}">
+        </div>
+{% endfor %}
+<form action="" method="post">
+{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Отправить">
+
+</form>
+{% endblock %}

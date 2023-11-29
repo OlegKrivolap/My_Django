@@ -15,3 +15,4 @@ class PostAdmin(admin.ModelAdmin):
         return mark_safe(f'<a href="{obj.link}">link<a>')
 
 admin.site.register(Car, PostAdmin)
+admin.site.register(OptionalEquipment)
