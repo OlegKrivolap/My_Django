@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="content">
+{%for i in w1%}
+
+<a href="{% url 'get_car' i.pk %}">
+    {%if i.photo%}
+    <img src="{{i.photo.url}}">
+    {% endif%}
+</a>
+{%endfor%}
+    </div>
+{% endblock %}

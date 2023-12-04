@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="content">
+{%for i in car%}
+    <figure>
+<p>{{i.name}}</p>
+        <p>{{i.color}}</p>
+        <p>{{i.price}} $</p>
+    <img src="{{i.photo.url}}">
+
+    <figcaption><a href="{% url 'forms' i.pk %}">Купить</a></figcaption>
+        </figure>
+{%endfor%}
+    </div>
+{% endblock %}
