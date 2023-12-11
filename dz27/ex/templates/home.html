@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for car in cars %}
+    <p>{{ car.name }}</p>
+    <p>{{ car.color }}</p>
+<p><img src="{{ car.photo.url }}"></p>
+    <p>{{ car.price }}</p>
+{% endfor %}
+<form action="{% url 'GetListView' %}" method="post">
+     {% csrf_token %}
+    <button  type = 'submit'>Скачать все автомобили</button>
+</form>
+
+{% endblock %}
