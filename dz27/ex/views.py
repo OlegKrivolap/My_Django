@@ -1,15 +1,13 @@
 from django.shortcuts import render
-from rest_framework.views import *
 from .serializers import *
-from .models import *
-from rest_framework.response import Response
 from rest_framework import generics
-from .export import *
 from django.http import HttpResponse
 from django.views.generic import *
-from .models import *
-from .forms import *
 from .admin import *
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.views import LoginView, LogoutView
+from django.views.generic.edit import CreateView
+from django.urls import reverse_lazy
 # Create your views here.
 
 def home(request):
@@ -43,5 +41,13 @@ class GetListView(ListView, FormView):
         return response
 
 
+class SignUpView(CreateView):
+    template_name = 'registration/register.html'
+    form_class = UserCreationForm
+    success_url = reverse_lazy('login')
 
+class CustomLoginView(LoginView):
+    template_name = 'registration/login.html'
 
+class CustomLogoutView(LogoutView):
+    pass
